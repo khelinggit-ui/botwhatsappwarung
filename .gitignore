@@ -1,0 +1,25 @@
+# Duplikat lokal — jangan ikut repo
+/backend - Copy/
+
+# Kredensial & sesi WhatsApp (jangan pernah di-commit)
+session/
+bot/session/
+*.session.json
+
+# Secret (gunakan *.example sebagai template)
+.env
+!.env.example
+backend/.env
+bot/.env
+
+# Dependencies & build
+bot/node_modules/
+bot/dist/
+node_modules/
+
+# OS / editor
+.DS_Store
+Thumbs.db
+.vscode/
+.idea/
+*.log

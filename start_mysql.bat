@@ -1,0 +1,3 @@
+@echo off
+echo Starting MySQL 8.0...
+"D:\laragon\bin\mysql\mysql-8.0.30-winx64\bin\mysqld" --standalone --datadir="D:\laragon\data\mysql" --console
