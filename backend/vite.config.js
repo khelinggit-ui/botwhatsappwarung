@@ -11,7 +11,6 @@ export default defineConfig({
         tailwindcss(),
     ],
     server: {
-        host: true,
         allowedHosts: ['vite.aspsr.xyz'],
         watch: {
             ignored: ['**/storage/framework/views/**'],
