@@ -13,6 +13,9 @@ return Application::configure(basePath: dirname(__DIR__))
         health: '/up',
     )
     ->withMiddleware(function (Middleware $middleware): void {
+            // Permintaan datang via Cloudflare Tunnel (cloudflared di localhost),
+            // jadi percayai header X-Forwarded-* agar https terbaca benar.
+            $middleware->trustProxies(at: '*');
             $middleware->alias([
                 'bot.auth' => BotAuthMiddleware::class,
                 'admin' => \App\Http\Middleware\EnsureUserIsAdmin::class,
